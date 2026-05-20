@@ -1,0 +1,65 @@
+/* Logo animation from about_us.php */
+.logo-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+}
+.logo-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: calc(200px * 14);
+}
+.logo-card {
+    width: 200px;
+    height: 100px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+}
+.logo-card img {
+    max-width: 120px;
+    height: auto;
+}
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-200px * 7)); }
+}
+
+/* Image Hover Effects */
+#aboutImage, #growBetterImage, #storyImage {
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+#aboutImage:hover, #storyImage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Styles */
+.section-title {
+    color: #2E475D;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+.section-text {
+    color: #516F90;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Contact Cards Hover */
+.hvr-shutter-out-horizontal {
+    transition: all 0.3s ease;
+}
+.hvr-shutter-out-horizontal:hover {
+    background-color: #198754 !important;
+    color: white;
+}
+.hvr-shadow:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}

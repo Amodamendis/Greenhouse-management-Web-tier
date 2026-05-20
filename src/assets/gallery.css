@@ -1,0 +1,140 @@
+/* Page Layout */
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Gallery Container */
+.gallery-container {
+    width: 100%;
+    padding: 20px;
+    background: #f8f9fa;
+    position: relative;
+    min-height: 1800px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+/* Gallery Items Base Styles */
+.gallery-item {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* Media Elements */
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay Styles */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.gallery-item:hover .gallery-overlay {
+    background: rgba(0,0,0,0.4);
+    opacity: 1;
+}
+
+/* Caption Styles */
+.gallery-caption {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.gallery-caption .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.gallery-caption .description {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+/* Video-specific styles */
+.gallery-item.video-item video {
+    pointer-events: auto;
+}
+
+.gallery-item.video-item:hover .gallery-overlay {
+    opacity: 0;
+}
+
+/* Item Positions */
+#item1 { width: 240px; height: 240px; left: 0; top: 0; }
+#item2 { width: 400px; height: 300px; left: 260px; top: 0; }
+#item3 { width: 200px; height: 200px; left: 680px; top: 0; }
+#item4 { width: 280px; height: 240px; left: 900px; top: 0; }
+#item5 { width: 240px; height: 240px; left: 0; top: 260px; }
+#item6 { width: 400px; height: 300px; left: 260px; top: 320px; }
+#item7 { width: 480px; height: 450px; left: 680px; top: 220px; }
+#item8 { width: 200px; height: 200px; left: 0; top: 520px; }
+#item9 { width: 280px; height: 240px; left: 220px; top: 640px; }
+#item10 { width: 400px; height: 300px; left: 520px; top: 720px; }
+#item11 { width: 200px; height: 200px; left: 0; top: 780px; }
+#item12 { width: 280px; height: 240px; left: 220px; top: 900px; }
+#item13 { width: 400px; height: 300px; left: 520px; top: 1040px; }
+#item14 { width: 240px; height: 240px; left: 940px; top: 720px; }
+#item15 { width: 480px; height: 480px; left: 0; top: 1160px; }
+#item16 { width: 200px; height: 200px; left: 500px; top: 1360px; }
+#item17 { width: 280px; height: 240px; left: 720px; top: 1160px; }
+#item18 { width: 400px; height: 300px; left: 720px; top: 1420px; }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .gallery-container {
+        min-height: auto;
+        padding: 20px 10px;
+        margin-left: 0;
+    }
+    
+    .gallery-item {
+        position: relative;
+        width: 100% !important;
+        height: 300px !important;
+        left: 0 !important;
+        top: 0 !important;
+        margin-bottom: 20px;
+    }
+}

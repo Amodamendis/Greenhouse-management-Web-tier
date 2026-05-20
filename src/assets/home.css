@@ -1,0 +1,93 @@
+.feature-card {
+    height: 500px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-large {
+    font-size: 2.5rem;
+}
+
+#carouselLeft,
+#carouselRight {
+    border-radius: 0;
+    overflow: hidden;
+}
+
+#carouselLeft {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#carouselRight {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#carouselLeft .carousel-item img {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    height: 550px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#carouselRight .carousel-item img {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 550px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container4 img {
+    height: 100px;
+    width: 100px;
+}
+
+.carousel-item {
+    transition: transform .6s ease-in-out;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#textCarousel:hover .carousel-control-prev,
+#textCarousel:hover .carousel-control-next {
+    opacity: 0.8;
+}
+
+.carousel-indicators {
+    margin-bottom: -30px;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-item .card-body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active .card-body {
+    opacity: 1;
+}

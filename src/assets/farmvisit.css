@@ -1,0 +1,54 @@
+.farm-visit-wrapper {
+    background-image: url('/images/fv2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.farm-visit-container {
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 15px;
+    padding: 2.5rem;
+    max-width: 550px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.farm-visit-container .form-control {
+    background-color: #ffc107;
+    border: none;
+    padding: 0.8rem 1rem;
+    color: #000;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.farm-visit-container .form-control::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.farm-visit-container .form-control:focus {
+    background-color: #ffca2c;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.3);
+}
+
+.farm-visit-container .icon-container {
+    background-color: #ffc107;
+    padding: 0.8rem;
+    border-radius: 8px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.farm-visit-container .icon-container i {
+    font-size: 1.2rem;
+    color: #000;
+}

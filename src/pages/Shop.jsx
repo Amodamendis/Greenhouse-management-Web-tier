@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
 import React, { useState, useEffect } from 'react';
 import API from '../services/api'; // This is the bridge to your Node.js backend
 
@@ -22,10 +24,29 @@ const Shop = () => {
     }
   };
 
-  const handleAddToCart = (product) => {
-    // We will wire this to the database in the next step
-    console.log('Adding to cart:', product.name);
-    alert(`${product.name} added to cart!`);
+  const { user } = useContext(AuthContext);
+
+  const handleAddToCart = async (product) => {
+    if (!user) {
+      alert("Please login first to add items to your cart.");
+      return;
+    }
+
+    try {
+      const cartPayload = {
+        username: user.username,
+        name: product.name,
+        price: product.price,
+        image: product.image,
+        quantity: 1
+      };
+      
+      await API.post('/cart', cartPayload);
+      alert(`${product.name} added to cart successfully!`);
+    } catch (error) {
+      console.error('Error adding to cart:', error);
+      alert('Failed to add item to cart.');
+    }
   };
 
   if (loading) return <h2 className="text-center mt-5">Loading products...</h2>;
