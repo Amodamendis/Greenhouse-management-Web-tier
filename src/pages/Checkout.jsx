@@ -95,10 +95,10 @@ const Checkout = () => {
                 <div className="mb-3">
                   <label className="form-label text-white-50">Cards Accepted:</label>
                   <div className="d-flex gap-2 bg-white bg-opacity-10 p-2 rounded align-items-center" style={{ width: 'fit-content' }}>
-                    <img src="/paymentlogo/btc.png" alt="BTC" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
-                    <img src="/paymentlogo/master.png" alt="MasterCard" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
-                    <img src="/paymentlogo/visa.png" alt="Visa" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
-                    <img src="/paymentlogo/westernunion.png" alt="Western Union" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/paymentlogo/btc.png`} alt="BTC" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/paymentlogo/master.png`} alt="MasterCard" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/paymentlogo/visa.png`} alt="Visa" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/paymentlogo/westernunion.png`} alt="Western Union" style={{ height: '30px', width: 'auto', objectFit: 'contain' }} />
                   </div>
                 </div>
                 

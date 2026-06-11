@@ -90,13 +90,11 @@ const AdminDashboard = () => {
                 <i className="bi bi-calendar-event me-2"></i> Farm Visits
               </Link>
             </li>
-            {/* NEW LINK: Messages */}
             <li className="nav-item mb-2">
               <Link to="/admin/messages" className="nav-link text-white">
                 <i className="bi bi-envelope me-2"></i> Messages
               </Link>
             </li>
-            {/* NEW LINK: Orders */}
             <li className="nav-item mb-2">
               <Link to="/admin/orders" className="nav-link text-white">
                 <i className="bi bi-cart-check me-2"></i> Orders
@@ -158,20 +156,20 @@ const AdminDashboard = () => {
                   <th>ID</th>
                   <th>Name</th>
                   <th>Price</th>
-                  <th>Actions</th> {/* Added Actions Column Header */}
+                  <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {products.map((product) => (
                   <tr key={product.id}>
                     <td>
-                      <img src={`http://localhost:4000/uploads/${product.image}`} alt={product.name} style={{ width: '50px', height: '50px', objectFit: 'cover' }} onError={(e) => e.target.src='/images/logo.png'} />
+                      {/* FIX: Replaced localhost with CDN URL */}
+                      <img src={`${import.meta.env.VITE_CDN_URL}/uploads/${product.image}`} alt={product.name} style={{ width: '50px', height: '50px', objectFit: 'cover' }} onError={(e) => e.target.src=`${import.meta.env.VITE_CDN_URL}/images/logo.png`} />
                     </td>
                     <td>#{product.id}</td>
                     <td className="fw-bold">{product.name}</td>
                     <td>Rs {product.price}/=</td>
                     <td>
-                      {/* Added Delete Button */}
                       <button className="btn btn-sm btn-outline-danger" onClick={() => handleDeleteProduct(product.id)}>
                         <i className="bi bi-trash"></i> Delete
                       </button>

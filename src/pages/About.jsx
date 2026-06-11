@@ -20,9 +20,8 @@ const About = () => {
                 </p>
               </div>
               <div className="col-lg-6 text-center">
-                {/* HERE IS THE FIX: The exact dark green background container for the white logo */}
                 <div style={{ backgroundColor: '#004225', padding: '40px', borderRadius: '15px', display: 'inline-block' }} className="shadow">
-                  <img src="/images/logo.png" id="aboutImage" alt="About Us Logo" className="img-fluid" style={{ maxWidth: '250px' }} />
+                  <img src={`${import.meta.env.VITE_CDN_URL}/images/logo.png`} id="aboutImage" alt="About Us Logo" className="img-fluid" style={{ maxWidth: '250px' }} />
                 </div>
               </div>
             </div>
@@ -30,8 +29,7 @@ const About = () => {
             {/* Our Mission Section */}
             <div id="missionSection" className="row align-items-center mt-5">
               <div className="col-lg-6">
-                {/* Assuming you still have this image from the old PHP layout in your public/images folder */}
-                <img id="growBetterImage" src="/images/ab1 (5).jpg" alt="Our Mission" className="img-fluid rounded shadow" onError={(e) => { e.target.src = '/images/logo.png'; e.target.parentElement.style.backgroundColor = '#004225'; e.target.parentElement.style.padding = '40px'; }} />
+                <img id="growBetterImage" src={`${import.meta.env.VITE_CDN_URL}/images/ab1 (5).jpg`} alt="Our Mission" className="img-fluid rounded shadow" onError={(e) => { e.target.src = `${import.meta.env.VITE_CDN_URL}/images/logo.png`; e.target.parentElement.style.backgroundColor = '#004225'; e.target.parentElement.style.padding = '40px'; }} />
               </div>
               <div className="col-lg-6 ps-lg-5">
                 <h2 className="section-title">Our Mission</h2>
@@ -49,13 +47,13 @@ const About = () => {
           <div className="logo-track">
             {certifications.map((cert, index) => (
               <div className="logo-card" key={`cert1-${index}`}>
-                <img src={`/imgscards/${cert}.png`} alt={`${cert} Logo`} />
+                <img src={`${import.meta.env.VITE_CDN_URL}/imgscards/${cert}.png`} alt={`${cert} Logo`} />
               </div>
             ))}
             {/* Duplicate for infinite scroll loop */}
             {certifications.map((cert, index) => (
               <div className="logo-card" key={`cert2-${index}`}>
-                <img src={`/imgscards/${cert}.png`} alt={`${cert} Logo`} />
+                <img src={`${import.meta.env.VITE_CDN_URL}/imgscards/${cert}.png`} alt={`${cert} Logo`} />
               </div>
             ))}
           </div>

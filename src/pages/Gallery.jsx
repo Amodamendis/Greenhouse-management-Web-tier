@@ -8,7 +8,7 @@ const Gallery = () => {
         <div className="gallery-container">
           {/* First Row */}
           <div id="item1" className="gallery-item">
-            <img src="/gallery/1.jpg" alt="Seeds of Tomorrow" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/1.jpg`} alt="Seeds of Tomorrow" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Seeds of Tomorrow</div>
@@ -18,7 +18,7 @@ const Gallery = () => {
           </div>
 
           <div id="item2" className="gallery-item">
-            <img src="/gallery/2.jpg" alt="Crimson Harvest" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/2.jpg`} alt="Crimson Harvest" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Crimson Harvest</div>
@@ -28,7 +28,7 @@ const Gallery = () => {
           </div>
 
           <div id="item3" className="gallery-item">
-            <img src="/gallery/3.jpg" alt="Hydroponic Highway" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/3.jpg`} alt="Hydroponic Highway" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Hydroponic Highway</div>
@@ -38,7 +38,7 @@ const Gallery = () => {
           </div>
 
           <div id="item4" className="gallery-item">
-            <img src="/gallery/4.jpg" alt="Vine Ripened Glory" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/4.jpg`} alt="Vine Ripened Glory" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Vine Ripened Glory</div>
@@ -55,7 +55,7 @@ const Gallery = () => {
           </div>
 
           <div id="item6" className="gallery-item">
-            <img src="/gallery/5.jpg" alt="Greenhouse Expanse" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/5.jpg`} alt="Greenhouse Expanse" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Greenhouse Expanse</div>
@@ -65,7 +65,7 @@ const Gallery = () => {
           </div>
 
           <div id="item7" className="gallery-item" style={{ marginTop: '30px' }}>
-            <img src="/gallery/6.jpg" alt="Industrial Rhythm" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/6.jpg`} alt="Industrial Rhythm" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Industrial Rhythm</div>
@@ -75,7 +75,7 @@ const Gallery = () => {
           </div>
 
           <div id="item8" className="gallery-item">
-            <img src="/gallery/7.jpg" alt="Drone view" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/7.jpg`} alt="Drone view" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Drone view</div>
@@ -93,7 +93,7 @@ const Gallery = () => {
           </div>
 
           <div id="item10" className="gallery-item">
-            <img src="/gallery/8.jpg" alt="Gentle Touch" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/8.jpg`} alt="Gentle Touch" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Gentle Touch</div>
@@ -103,17 +103,17 @@ const Gallery = () => {
           </div>
 
           <div id="item11" className="gallery-item">
-            <img src="/gallery/10.jpg" alt="Golden Bounty" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/10.jpg`} alt="Golden Bounty" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Golden Bounty</div>
                 <div className="description">Hands holding fresh yellow produce in greenhouse setting</div>
               </div>
             </div>
-          </div>
+          </div>``
 
           <div id="item12" className="gallery-item">
-            <img src="/gallery/9.jpg" alt="Lettuce Array" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/9.jpg`} alt="Lettuce Array" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Lettuce Array</div>
@@ -123,7 +123,7 @@ const Gallery = () => {
           </div>
 
           <div id="item13" className="gallery-item">
-            <img src="/gallery/11.jpg" alt="Farmer's Companion" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/11.jpg`} alt="Farmer's Companion" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Farmer's Companion</div>
@@ -140,7 +140,7 @@ const Gallery = () => {
           </div>
 
           <div id="item15" className="gallery-item">
-            <img src="/gallery/12.jpg" alt="Greenhouse Twilight" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/12.jpg`} alt="Greenhouse Twilight" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Greenhouse Twilight</div>
@@ -150,7 +150,7 @@ const Gallery = () => {
           </div>
 
           <div id="item16" className="gallery-item">
-            <img src="/gallery/13.jpg" alt="Green Abundance" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/13.jpg`} alt="Green Abundance" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Green Abundance</div>
@@ -160,7 +160,7 @@ const Gallery = () => {
           </div>
 
           <div id="item18" className="gallery-item">
-            <img src="/gallery/14.jpg" alt="Growth Operations" />
+            <img src={`${import.meta.env.VITE_CDN_URL}/gallery/14.jpg`} alt="Growth Operations" />
             <div className="gallery-overlay">
               <div className="gallery-caption">
                 <div className="title">Growth Operations</div>

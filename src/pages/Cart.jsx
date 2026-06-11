@@ -44,7 +44,6 @@ const Cart = () => {
     if (newQty < 1) return;
     
     try {
-      // Updates the specific cart item quantity on your server
       await API.put(`/cart/${id}`, { quantity: newQty });
       fetchCart();
     } catch (error) {
@@ -86,11 +85,12 @@ const Cart = () => {
                         <td>{index + 1}</td>
                         <td>{item.name}</td>
                         <td>
+                          {/* FIX: Replaced localhost with CDN URL */}
                           <img 
-                            src={`http://localhost:4000/uploads/${item.image}`} 
+                            src={`${import.meta.env.VITE_CDN_URL}/uploads/${item.image}`} 
                             alt={item.name} 
                             style={{ width: '120px', height: '120px', objectFit: 'contain', backgroundColor: '#ffffff', padding: '5px', borderRadius: '4px' }} 
-                            onError={(e) => e.target.src='/images/logo.png'} 
+                            onError={(e) => e.target.src=`${import.meta.env.VITE_CDN_URL}/images/logo.png`} 
                           />
                         </td>
                         <td>Rs.{item.price}/-</td>

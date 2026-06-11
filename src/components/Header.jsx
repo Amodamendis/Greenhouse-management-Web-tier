@@ -9,7 +9,7 @@ const Header = () => {
         <div className="container-fluid">
           {/* Logo */}
           <Link className="navbar-brand me-2 px-2" to="/">
-            <img src="/images/logo.png" alt="Whiteleaf Logo" height="70" width="70" />
+           <img src={`${import.meta.env.VITE_CDN_URL}/images/logo.png`} alt="Whiteleaf Logo" height="70" width="70" />
           </Link>
 
           {/* Search Bar */}

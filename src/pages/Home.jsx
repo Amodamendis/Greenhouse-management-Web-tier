@@ -15,7 +15,7 @@ const Home = () => {
               </p>
             </div>
             <div className="col-lg-6">
-              <img src="/images/logo.png" alt="WhiteLeaf Agri Greenhouse" className="img-fluid rounded no-shadow" />
+              <img src={`${import.meta.env.VITE_CDN_URL}/images/logo.png`} alt="WhiteLeaf Agri Greenhouse" className="img-fluid rounded no-shadow" />
             </div>
           </div>
         </div>
@@ -72,19 +72,19 @@ const Home = () => {
               <div id="carouselLeft" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ width: '562px', height: '550px', marginLeft: '70px', pointerEvents: 'none' }}>
                 <div className="carousel-inner">
                   <div className="carousel-item active">
-                    <img src="/images/bw_greenhouse1.png" alt="First slide" />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/images/bw_greenhouse1.png`} alt="First slide" />
                   </div>
                   <div className="carousel-item">
-                    <img src="/images/bw_greenhouse2.png" alt="Second slide" />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/images/bw_greenhouse2.png`} alt="Second slide" />
                   </div>
                   <div className="carousel-item">
-                    <img src="/images/bw_greenhouse3.png" alt="Third slide" />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/images/bw_greenhouse3.png`} alt="Third slide" />
                   </div>
                   <div className="carousel-item">
-                    <img src="/images/bw_greenhouse4.jpg" alt="Fourth slide" />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/images/bw_greenhouse4.jpg`} alt="Fourth slide" />
                   </div>
                   <div className="carousel-item">
-                    <img src="/images/bw_greenhouse5.png" alt="Fifth slide" />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/images/bw_greenhouse5.png`} alt="Fifth slide" />
                   </div>
                 </div>
               </div>
@@ -95,19 +95,19 @@ const Home = () => {
               <div id="carouselRight" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ width: '562px', height: '550px', marginRight: '10px', pointerEvents: 'none' }}>
                 <div className="carousel-inner">
                   <div className="carousel-item active">
-                    <img src="/grcards/teagreen 2.jpg" alt="First slide" />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/grcards/teagreen 2.jpg`} alt="First slide" />
                   </div>
                   <div className="carousel-item">
-                    <img src="/grcards/aspharagus 2.jpg" alt="Second slide" />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/grcards/aspharagus 2.jpg`} alt="Second slide" />
                   </div>
                   <div className="carousel-item">
-                    <img src="/grcards/laurelgreen 2.jpg" alt="Third slide" />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/grcards/laurelgreen 2.jpg`} alt="Third slide" />
                   </div>
                   <div className="carousel-item">
-                    <img src="/grcards/palespringbud 2.jpg" alt="Fourth slide" />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/grcards/palespringbud 2.jpg`} alt="Fourth slide" />
                   </div>
                   <div className="carousel-item">
-                    <img src="/grcards/boredaccentgreen 2.jpg" alt="Fifth slide" />
+                    <img src={`${import.meta.env.VITE_CDN_URL}/grcards/boredaccentgreen 2.jpg`} alt="Fifth slide" />
                   </div>
                 </div>
               </div>
@@ -180,10 +180,10 @@ const Home = () => {
               <div className="col-md-3">
                 <div id="demo1" className="carousel slide carousel-fade" data-bs-ride="carousel">
                   <div className="carousel-inner">
-                    <div className="carousel-item active"><img src="/4carousel/bellpepper.png" alt="bellpepper" /></div>
-                    <div className="carousel-item"><img src="/4carousel/blueberry.png" alt="blueberry" /></div>
-                    <div className="carousel-item"><img src="/4carousel/cauliflower.png" alt="cauliflower" /></div>
-                    <div className="carousel-item"><img src="/4carousel/celery.png" alt="celery" /></div>
+                    <div className="carousel-item active"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/bellpepper.png`} alt="bellpepper" /></div>
+                    <div className="carousel-item"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/blueberry.png`} alt="blueberry" /></div>
+                    <div className="carousel-item"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/cauliflower.png`} alt="cauliflower" /></div>
+                    <div className="carousel-item"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/celery.png`} alt="celery" /></div>
                   </div>
                 </div>
               </div>
@@ -191,10 +191,10 @@ const Home = () => {
               <div className="col-md-3">
                 <div id="demo2" className="carousel slide carousel-fade" data-bs-ride="carousel">
                   <div className="carousel-inner">
-                    <div className="carousel-item active"><img src="/4carousel/cucumber.png" alt="cucumber" /></div>
-                    <div className="carousel-item"><img src="/4carousel/eggplant.png" alt="eggplant" /></div>
-                    <div className="carousel-item"><img src="/4carousel/lecctuce.png" alt="lettuce" /></div>
-                    <div className="carousel-item"><img src="/4carousel/microgreen.png" alt="microgreen" /></div>
+                    <div className="carousel-item active"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/cucumber.png`} alt="cucumber" /></div>
+                    <div className="carousel-item"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/eggplant.png`} alt="eggplant" /></div>
+                    <div className="carousel-item"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/lecctuce.png`} alt="lettuce" /></div>
+                    <div className="carousel-item"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/microgreen.png`} alt="microgreen" /></div>
                   </div>
                 </div>
               </div>
@@ -202,10 +202,10 @@ const Home = () => {
               <div className="col-md-3">
                 <div id="demo3" className="carousel slide carousel-fade" data-bs-ride="carousel">
                   <div className="carousel-inner">
-                    <div className="carousel-item active"><img src="/4carousel/mint.png" alt="mint" /></div>
-                    <div className="carousel-item"><img src="/4carousel/mushroom1.png" alt="mushroom" /></div>
-                    <div className="carousel-item"><img src="/4carousel/mushroom2.png" alt="mushroom" /></div>
-                    <div className="carousel-item"><img src="/4carousel/orange.png" alt="orange" /></div>
+                    <div className="carousel-item active"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/mint.png`} alt="mint" /></div>
+                    <div className="carousel-item"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/mushroom1.png`} alt="mushroom" /></div>
+                    <div className="carousel-item"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/mushroom2.png`} alt="mushroom" /></div>
+                    <div className="carousel-item"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/orange.png`} alt="orange" /></div>
                   </div>
                 </div>
               </div>
@@ -213,10 +213,10 @@ const Home = () => {
               <div className="col-md-3">
                 <div id="demo4" className="carousel slide carousel-fade" data-bs-ride="carousel">
                   <div className="carousel-inner">
-                    <div className="carousel-item active"><img src="/4carousel/raspberries.png" alt="raspberries" /></div>
-                    <div className="carousel-item"><img src="/4carousel/spinach.png" alt="spinach" /></div>
-                    <div className="carousel-item"><img src="/4carousel/squash.png" alt="squash" /></div>
-                    <div className="carousel-item"><img src="/4carousel/tomatoes.png" alt="tomatoes" /></div>
+                    <div className="carousel-item active"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/raspberries.png`} alt="raspberries" /></div>
+                    <div className="carousel-item"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/spinach.png`} alt="spinach" /></div>
+                    <div className="carousel-item"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/squash.png`} alt="squash" /></div>
+                    <div className="carousel-item"><img src={`${import.meta.env.VITE_CDN_URL}/4carousel/tomatoes.png`} alt="tomatoes" /></div>
                   </div>
                 </div>
               </div>
