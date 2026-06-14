@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// This points to your Node.js backend
+// Dynamically point to the current domain's /api route
 const API = axios.create({
-    baseURL: 'http://localhost:4000/api',
+    baseURL: '/api', 
 });
 
 // Attach the JWT token to every request if the user is logged in
