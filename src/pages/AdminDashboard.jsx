@@ -38,7 +38,7 @@ const AdminDashboard = () => {
     setImageFile(e.target.files[0]);
   };
 
-  const handleAddProduct = async (e) => {
+const handleAddProduct = async (e) => {
     e.preventDefault();
     if (!imageFile) return alert("Please select an image");
 
@@ -49,7 +49,9 @@ const AdminDashboard = () => {
     data.append('productimage', imageFile);
 
     try {
-      await API.post('/products', data, { headers: { 'Content-Type': 'multipart/form-data' } });
+    
+      await API.post('/products', data);
+      
       alert('Product added successfully!');
       setShowForm(false);
       setFormData({ productname: '', productprice: '', categorynu: '' });
