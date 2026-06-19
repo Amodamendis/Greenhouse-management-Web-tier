@@ -1,20 +1,18 @@
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import React, { useState, useEffect } from 'react';
-import API from '../services/api'; // This is the bridge to your Node.js backend
+import API from '../services/api';
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // This runs the moment the page loads
   useEffect(() => {
     fetchProducts();
   }, []);
 
   const fetchProducts = async () => {
     try {
-      // Reaches out to http://localhost:4000/api/products
       const response = await API.get('/products');
       setProducts(response.data);
       setLoading(false);
@@ -56,17 +54,22 @@ const Shop = () => {
       <h2 className="text-center mb-5 fw-bold" style={{ color: '#004225' }}>Our Fresh Produce</h2>
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
         
-        {/* We map through the database array and create a card for every product */}
         {products.map((product) => (
           <div className="col" key={product.id}>
             <div className="card h-100 shadow-sm" style={{ transition: 'transform 0.3s' }}>
+              
+              {/* THE FIX: Bulletproof S3 Pathing */}
               <img 
-                src={`http://localhost:4000/uploads/${product.image}`} 
+                src={product.image.startsWith('uploads/') 
+                  ? `https://greenhouse-static-assets-619891987476.s3.us-east-1.amazonaws.com/${product.image}`
+                  : `https://greenhouse-static-assets-619891987476.s3.us-east-1.amazonaws.com/uploads/${product.image}`
+                } 
                 className="card-img-top p-3" 
                 alt={product.name}
                 style={{ objectFit: 'contain', height: '200px' }}
-                onError={(e) => { e.target.src = '/images/logo.png'; }} // Fallback if image is missing
+                onError={(e) => { e.target.src = '/images/logo.png'; }} 
               />
+
               <div className="card-body text-center">
                 <h5 className="card-title">{product.name}</h5>
                 <p className="card-text text-danger fw-bold">Rs {product.price}/= per Kg</p>

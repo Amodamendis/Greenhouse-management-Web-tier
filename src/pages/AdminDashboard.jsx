@@ -8,7 +8,6 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   
-  // New Product Form State
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({ productname: '', productprice: '', categorynu: '' });
   const [imageFile, setImageFile] = useState(null);
@@ -49,14 +48,12 @@ const handleAddProduct = async (e) => {
     data.append('productimage', imageFile);
 
     try {
-    
       await API.post('/products', data);
-      
       alert('Product added successfully!');
       setShowForm(false);
       setFormData({ productname: '', productprice: '', categorynu: '' });
       setImageFile(null);
-      fetchProducts(); // Refresh the table
+      fetchProducts(); 
     } catch (error) {
       console.error('Error adding product:', error);
       alert('Failed to add product');
@@ -67,7 +64,7 @@ const handleAddProduct = async (e) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
       try {
         await API.delete(`/products/${id}`);
-        fetchProducts(); // Refresh table after deletion
+        fetchProducts(); 
       } catch (error) {
         console.error('Error deleting product:', error);
         alert('Failed to delete product');
@@ -165,8 +162,16 @@ const handleAddProduct = async (e) => {
                 {products.map((product) => (
                   <tr key={product.id}>
                     <td>
-                      {/* FIX: Replaced localhost with CDN URL */}
-                      <img src={`${import.meta.env.VITE_CDN_URL}/uploads/${product.image}`} alt={product.name} style={{ width: '50px', height: '50px', objectFit: 'cover' }} onError={(e) => e.target.src=`${import.meta.env.VITE_CDN_URL}/images/logo.png`} />
+                      {/* THE FIX: Bulletproof S3 Pathing */}
+                      <img 
+                        src={product.image.startsWith('uploads/') 
+                          ? `https://greenhouse-static-assets-619891987476.s3.us-east-1.amazonaws.com/${product.image}`
+                          : `https://greenhouse-static-assets-619891987476.s3.us-east-1.amazonaws.com/uploads/${product.image}`
+                        } 
+                        alt={product.name} 
+                        style={{ width: '50px', height: '50px', objectFit: 'cover' }} 
+                        onError={(e) => e.target.src='/images/logo.png'} 
+                      />
                     </td>
                     <td>#{product.id}</td>
                     <td className="fw-bold">{product.name}</td>
