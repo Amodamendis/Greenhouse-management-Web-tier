@@ -32,7 +32,7 @@ const Cart = () => {
     if (window.confirm('Are you sure you want to delete this item?')) {
       try {
         await API.delete(`/cart/${id}`);
-        fetchCart(); // Refresh cart after deletion
+        fetchCart(); 
       } catch (error) {
         console.error('Error removing item:', error);
       }
@@ -85,12 +85,15 @@ const Cart = () => {
                         <td>{index + 1}</td>
                         <td>{item.name}</td>
                         <td>
-                          {/* FIX: Replaced localhost with CDN URL */}
+                          {/* THE FIX: Bulletproof S3 Pathing */}
                           <img 
-                            src={`${import.meta.env.VITE_CDN_URL}/uploads/${item.image}`} 
+                            src={item.image.startsWith('uploads/') 
+                              ? `https://greenhouse-static-assets-619891987476.s3.us-east-1.amazonaws.com/${item.image}`
+                              : `https://greenhouse-static-assets-619891987476.s3.us-east-1.amazonaws.com/uploads/${item.image}`
+                            } 
                             alt={item.name} 
                             style={{ width: '120px', height: '120px', objectFit: 'contain', backgroundColor: '#ffffff', padding: '5px', borderRadius: '4px' }} 
-                            onError={(e) => e.target.src=`${import.meta.env.VITE_CDN_URL}/images/logo.png`} 
+                            onError={(e) => { e.target.src = 'https://greenhouse-static-assets-619891987476.s3.us-east-1.amazonaws.com/images/logo.png'; }} 
                           />
                         </td>
                         <td>Rs.{item.price}/-</td>
@@ -147,7 +150,7 @@ const Cart = () => {
 
 // Helper function to format prices with commas
 const numberWithCommas = (x) => {
-  return x.toString().replace(/\B(?=(\d3)+(?!\d))/g, ",");
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
 export default Cart;
